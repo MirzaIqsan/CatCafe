@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Cat information</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container mt-3">
+        <h2>Update information</h2>
+
+        <!-- TODO: Insert code for form tag to update student info -->
+        <form action="/students/<%= updateStudent.id%>/update" method = "POST">
+        
+            <div class="mb-3 mt-3">
+                <label for="productName">Cat Name:</label>
+                <!-- TODO: Insert code to display original name of student in the value property -->
+                <input type="text" class="form-control" id="studentName" value = "<%=updateStudent.name%>" placeholder="Enter Cat name" name="studentName">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="quantity">Gender:</label>
+                <!-- TODO: Insert code to display original name of student in the value property -->
+                <input type="text" class="form-control" id="age" value = "<%=updateStudent.age%>" placeholder="Enter Gender" name="age">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="price">Weight(KG):</label>
+                
+                <input type="int" class="form-control" id="price" value = "<%=updateStudent.price%>" placeholder="Enter Weight" name="price">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

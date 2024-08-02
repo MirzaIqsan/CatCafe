@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Cat Management System</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container mt-3">
+        <h2>Cat Management System</h2>   
+          
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Cat ID</th>
+                    <th>Cat Name</th>
+                    <th>Gender</th>
+                    <th>Weight(KG)</th>
+                    <th>Image</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TO DO: Insert code here to display the students information by looping through the students array-->
+                <% for (let i = 0; i < students.length; i++) { %>
+                    <tr>
+                        <td><%= students[i].id  %></td>
+                        <td> <a href = "/students/<%= students[i].id%>"><%= students[i].name %></a></td>
+                        <td><%= students[i].age  %></td>
+                        <td><%= students[i].price  %></td>
+                        <td><img src="images/<%= students[i].image  %>" width="20%"></td>
+                        <td> <a href = "/students/<%= students[i].id %>/update">Edit</a></td>
+                        <td> <a href = "/students/<%= students[i].id %>/delete">Delete</a></td>
+                    </tr>
+                <% } %>
+                
+
+            </tbody>
+        </table>
+            
+    </div>
+</body>
+</html>

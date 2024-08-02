@@ -1,0 +1,23 @@
+
+
+body {
+    background-image: url('/images/CATS\ GROUP.jpg'); /* Replace with path to your background image */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.table {
+    background-color: #343a40; /* Dark background color */
+    color: white; /* Text color (optional, to ensure text is visible on dark background) */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2c3036; /* Darker shade for alternating rows */
+}
+
+.table td,
+.table th {
+    background-color: inherit; /* Inherit background color from .table class */
+    border-color: #454d55; /* Example border color for cells */
+    color: inherit; /* Inherit text color from .table class */
+}
